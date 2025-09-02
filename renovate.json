@@ -1,0 +1,54 @@
+{
+  "extends": [
+    "config:recommended",
+    ":dependencyDashboard",
+    ":semanticPrefixFixDepsChoreOthers",
+    "group:monorepos",
+    "group:recommended",
+    "workarounds:all"
+  ],
+  "labels": ["dependencies"],
+  "assignAutomerge": true,
+  "automerge": false,
+  "automergeType": "pr",
+  "platformAutomerge": true,
+  "minimumReleaseAge": "3 days",
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["^@types/"],
+      "groupName": "types"
+    },
+    {
+      "matchPackagePatterns": ["eslint", "prettier"],
+      "groupName": "linters"
+    },
+    {
+      "matchPackagePatterns": ["jest", "testing-library", "@testing-library"],
+      "groupName": "tests"
+    },
+    {
+      "matchPackagePatterns": ["next"],
+      "enabled": true,
+      "stabilityDays": 7,
+      "prCreation": "not-pending"
+    },
+    {
+      "matchDepTypes": ["devDependencies"],
+      "automerge": true
+    },
+    {
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    },
+    {
+      "matchPackageNames": ["node"],
+      "enabled": false
+    }
+  ],
+  "prHourlyLimit": 2,
+  "prConcurrentLimit": 10,
+  "rebaseWhen": "behind-base-branch",
+  "semanticCommits": "enabled",
+  "timezone": "Africa/Dakar",
+  "updateInternalDeps": true
+}
