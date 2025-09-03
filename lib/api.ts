@@ -6,7 +6,7 @@ export async function fetchAllUsers() {
   try {
     const res = await fetch(`${BASE_URL}/users`);
     if (!res.ok) {
-      throw new Error('Erreur lors du chargement des utilisateurs');
+      return null;
     }
     return res.json();
   } catch (error) {
@@ -20,7 +20,7 @@ export async function fetchUserById(id: string) {
   try {
     const res = await fetch(`${BASE_URL}/users/${id}`);
     if (!res.ok) {
-      throw new Error('Utilisateur non trouvé');
+      return null;
     }
     return res.json();
   } catch (error) {
