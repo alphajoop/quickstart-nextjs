@@ -1,97 +1,116 @@
-# Next.js Starter Template
+# 🚀 Next.js Quickstart Template
 
-A modern, production-ready Next.js 15+ starter template with TypeScript, ESLint, Prettier, and more.
+A production-ready Next.js 15+ starter template with shadcn/ui, CI/CD, and modern development tools. Perfect for quickly bootstrapping new projects with best practices built-in.
 
-## 🚀 Features
+## ✨ Features
+
+### 🎨 Frontend
 
 - ⚡ Next.js 15+ with App Router
-- 🎨 Tailwind CSS for styling
+- 🎨 shadcn/ui + Tailwind CSS
+- 🎭 Radix UI primitives
+- 🎨 Lucide React icons
+- 📱 Fully responsive design
+
+### 🛠 Development
+
 - 🛠 TypeScript
 - 🔍 ESLint + Prettier
-- 🎭 Absolute Imports
-- 📱 Responsive Design
-- 📦 pnpm (but works with npm/yarn)
+- 🐶 Husky Git hooks
+- � Renovate for dependency updates
+- 📦 pnpm (with npm/yarn support)
 
-## 🚀 Getting Started
+### 🚀 DevOps
 
-### Prerequisites
+- ✅ GitHub Actions CI/CD
+- 🧪 Automated testing setup
+- 🔄 Auto-formatting on commit
+- 📦 Zero-config deployments
 
-- Node.js 18.0.0 or later
-- pnpm (recommended) or npm/yarn
+## 🏗 Project Structure
 
-### Installation
+```
+.
+├── .github/
+│   └── workflows/         # GitHub Actions workflows
+├── app/                   # App Router
+│   └── (public)/          # Public routes
+│       └── users/         # Example feature
+├── components/            # Reusable components
+│   ├── ui/                # shadcn/ui components
+│   └── user-card.tsx      # Example component
+├── lib/                   # Utility functions
+└── types/                 # TypeScript types
+```
+
+## 🚀 Quick Start
 
 1. **Clone the repository**
 
    ```bash
    git clone https://github.com/alphajoop/quickstart-nextjs.git
    cd quickstart-nextjs
-   ```
-
-2. **Install dependencies**
-
-   ```bash
    pnpm install
-   # or
-   npm install
-   # or
-   yarn install
    ```
 
-3. **Set up environment variables**
-
-   ```bash
-   cp .env.example .env.local
-   # Edit the .env.local file with your configuration
-   ```
-
-4. **Start the development server**
-
+2. **Start developing**
    ```bash
    pnpm dev
-   # or
-   npm run dev
-   # or
-   yarn dev
    ```
+   Open [http://localhost:3000](http://localhost:3000)
 
-   Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+## 🛠 Development Workflow
 
-## 🛠 Development
+### Code Quality
 
-- **Lint code**
+- **Lint**: `pnpm lint`
+- **Format**: `pnpm format`
+- **Type Check**: `pnpm type-check`
 
-  ```bash
-  pnpm lint
-  ```
+### Git Hooks (via Husky)
 
-- **Format code**
+- Pre-commit: Runs lint-staged
+- Pre-push: Runs type checking
 
-  ```bash
-  pnpm format
-  ```
+### Automated Updates
+
+- **Renovate**: Automatically updates dependencies
+- **GitHub Actions**: Runs on every push/pull request
+  - Linting
+  - Type checking
+  - Build verification
 
 ## 🚀 Deployment
 
 ### Vercel (Recommended)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Falphajoop%2Fquickstart-nextjs)
 
 ### Other Platforms
 
-Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details on deploying to other platforms.
+- [Netlify](https://www.netlify.com/with/nextjs/)
+- [AWS](https://aws.amazon.com/amplify/)
+- [Railway](https://railway.app/)
 
-## 📚 Learn More
+## 📚 Documentation
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js](https://nextjs.org/docs)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Radix UI](https://www.radix-ui.com/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
-Made with ❤️ using [Next.js](https://nextjs.org/)
+Built with ❤️ by [Alpha Diop](https://github.com/alphajoop)
